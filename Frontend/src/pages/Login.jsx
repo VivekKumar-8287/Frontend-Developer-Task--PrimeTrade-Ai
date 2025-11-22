@@ -1,10 +1,9 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
+import { Link, useNavigate } from 'react-router-dom';
 import { z } from 'zod';
 import { login } from '../services/auth';
-import { useNavigate } from 'react-router-dom';
-import toast from 'react-hot-toast';
 
 const schema = z.object({
   email: z.string().email(),
@@ -45,7 +44,7 @@ export default function Login() {
       </form>
       
 <p className="text-center text-sm mt-3">
-  New user? <a href="/signup" className="text-blue-600 underline">Register</a>
+  New user? <Link to="/signup" className="text-blue-600 underline">Register</Link>
 </p>
       </div>
     </div>
