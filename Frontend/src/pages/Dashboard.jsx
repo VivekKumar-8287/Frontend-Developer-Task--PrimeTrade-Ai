@@ -46,6 +46,7 @@ export default function Dashboard() {
 
   
   useEffect(() => {
+    loadProfile()
     if (searchText.trim() === "") {
       loadTasks(); 
     }
