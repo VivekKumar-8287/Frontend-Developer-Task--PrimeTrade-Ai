@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "40c5c9e6-6623-407f-8204-3545263ef07d",
+		"name": "primetrade",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27222188"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\":\"0.7255413797063772\",\r\n    \"userId\":1,\r\n    \"amount\":\"40000\"\r\n}"
+				},
+				"url": "http://localhost:5000/"
+			},
+			"response": []
+		},
+		{
+			"name": "fetch user profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\":\"0.7255413797063772\",\r\n    \"userId\":1,\r\n    \"amount\":\"40000\"\r\n}"
+				},
+				"url": "http://localhost:5000/api/auth/me"
+			},
+			"response": []
+		},
+		{
+			"name": "create task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1ZDBkNzgwMTI4YjM1ZmFmNGYzNiIsImlhdCI6MTc2Mzc5NDM2NiwiZXhwIjoxNzY0Mzk5MTY2fQ.IJnqeMNqMjbA7Hsv3zbuqLy0XDAKcdh80JtKcA7IKWA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\":\"\",\r\n   \"description\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/task/"
+			},
+			"response": []
+		},
+		{
+			"name": "get task",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1ZDBkNzgwMTI4YjM1ZmFmNGYzNiIsImlhdCI6MTc2Mzc5NDM2NiwiZXhwIjoxNzY0Mzk5MTY2fQ.IJnqeMNqMjbA7Hsv3zbuqLy0XDAKcdh80JtKcA7IKWA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/task/"
+			},
+			"response": []
+		},
+		{
+			"name": "update the task",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1ZDBkNzgwMTI4YjM1ZmFmNGYzNiIsImlhdCI6MTc2Mzc5NDM2NiwiZXhwIjoxNzY0Mzk5MTY2fQ.IJnqeMNqMjbA7Hsv3zbuqLy0XDAKcdh80JtKcA7IKWA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Updated Task Title\",\r\n  \"completed\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/task/"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete task",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1ZDBkNzgwMTI4YjM1ZmFmNGYzNiIsImlhdCI6MTc2Mzc5NDM2NiwiZXhwIjoxNzY0Mzk5MTY2fQ.IJnqeMNqMjbA7Hsv3zbuqLy0XDAKcdh80JtKcA7IKWA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/task/"
+			},
+			"response": []
+		},
+		{
+			"name": "search Task",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjE1ZDBkNzgwMTI4YjM1ZmFmNGYzNiIsImlhdCI6MTc2Mzc5NDM2NiwiZXhwIjoxNzY0Mzk5MTY2fQ.IJnqeMNqMjbA7Hsv3zbuqLy0XDAKcdh80JtKcA7IKWA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/task/search"
+			},
+			"response": []
+		}
+	]
+}
