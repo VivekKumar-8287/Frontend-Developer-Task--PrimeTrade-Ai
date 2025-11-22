@@ -234,3 +234,10 @@ Export your Postman collection and place it in:
 -   Reusable dashboard layout
 
 -   User-specific search integrated
+
+  
+### **Recorded Video of Site**
+
+
+https://github.com/user-attachments/assets/be976a83-79c5-40dd-ae9d-1e25e5ab12c6
+
